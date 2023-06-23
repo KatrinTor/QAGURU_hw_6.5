@@ -3,12 +3,14 @@ from selene import have
 from selene.support.shared import browser
 
 def test_name(brwsr):
+    browser.open('/automation-practice-form')
+
     #input data
     browser.element('[id=firstName]').type('Katrin')
     browser.element('[id=lastName]').type('Torsunova')
     browser.element('[id=userEmail]').type('Katrin@test.ru')
     browser.element('//label[contains(text(), "Female")]').click()
-    browser.element('[id=userNumber]').type('89676253662')
+    browser.element('[id=userNumber]').type('8967625366')
     browser.element('[id="dateOfBirthInput"]').click()
     browser.element('[class="react-datepicker__month-select"]').click()
     browser.element('[value="10"]').click()
